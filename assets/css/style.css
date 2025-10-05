@@ -1,0 +1,352 @@
+.header {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.header .menu {
+    position: relative;
+    font-family: "pixelfontRegular";
+	font-weight: 400;
+	font-style: normal;
+}
+
+.header .menu .menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .menu .menu-list .menu-item {
+    display: inline-block;
+}
+
+.header .menu .menu-list .menu-item::after {
+    content: "|";
+    margin-right: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.header .menu .menu-list .menu-item:last-child::after {
+    display: none;
+}
+
+.header .menu .menu-list .menu-item .menu-link {
+    font-size: 12px;
+    color: #fff;
+    text-shadow:
+    2px 0 #000,
+   -2px 0 #000,
+    0 2px #000,
+    0 -2px #000,
+    2px 2px #000,
+   -2px 2px #000,
+    2px -2px #000,
+   -2px -2px #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../img/menu-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    width: 100%;
+    height: 113px;
+    z-index: -1;
+}
+
+.menu-burger {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+.menu-burger .hm {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-burger.active .hm:nth-child(2) {
+    opacity: 0;
+}
+.menu-burger.active .hm:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: #fff;
+}
+.menu-burger.active .hm:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: #fff;
+}
+
+@media(max-width: 1399px) {
+    .header .menu .menu-list .menu-item .menu-link {
+        font-size: 10px;
+    }
+
+    .menu::before {
+        height: 100px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .header .menu .menu-list .menu-item .menu-link {
+        font-size: 9px;
+    }
+
+    .menu::before {
+        height: 85px;
+    }
+}
+
+@media(max-width: 991px) {
+    .menu-burger {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 1;
+    }
+
+    .header .menu .menu-list .menu-item .menu-link {
+        font-size: 14px;
+    }
+
+    .header {
+        margin-top: 0;
+        top: initial;
+        left: initial;
+        transform: initial;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .header .menu {
+        height: 97vh;
+        position: absolute;
+        top: 10px;
+        left: -100%;
+        padding: 20px;
+        width: 40%;
+        background-color: #022348;
+        border-radius: 10px;
+        transition: .3s ease;
+    }
+
+    .header .menu.open {
+        left: 10px;
+    }
+
+    .header .menu .menu-list {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .header .menu .menu-list .menu-item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menu::before,
+    .header .menu .menu-list .menu-item::after {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    .header .menu {
+        width: 60%;
+    }
+}
+
+@media(max-width: 500px) {
+    .header .menu {
+        width: 85%;
+    }
+}
+
+.banner-main {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome {
+    position: relative;
+    margin-top: -80px;
+    padding: 40px 80px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #213c72;
+    z-index: 1;
+}
+
+.welcome::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+    background-image: url(../img/welcome-bg-after.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 230px;
+    height: 60px;
+}
+
+.welcome .welcome-img {
+    position: relative;
+    margin-right: 80px;
+    width: 25%;
+}
+
+.welcome .welcome-img::before {
+    content: "";
+    position: absolute;
+    top: -112px;
+    left: -50px;
+    display: block;
+    background-image: url(../img/welcome-before.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 120px;
+}
+
+.welcome .welcome-img::after {
+    content: "";
+    position: absolute;
+    bottom: -112px;
+    right: -50px;
+    display: block;
+    background-image: url(../img/welcome-after.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 185px;
+}
+
+.welcome .welcome-caption {
+    color: #fff;
+    width: 48%;
+}
+
+.welcome .welcome-caption .title {
+    font-family: "pixelfontBold";
+    color: #ffd800;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome .welcome-caption .text {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+@media(max-width: 1500px) {
+    .welcome .welcome-img::before {
+        top: -89px;
+        left: -50px;
+        width: 120px;
+        height: 90px;
+    }
+
+    .welcome .welcome-img::after {
+        bottom: -88px;
+        right: -30px;
+        width: 105px;
+        height: 127px;
+    }
+}
+
+@media(max-width: 1400px) {
+    .welcome {
+        margin-top: -60px;
+    }
+}
+
+@media(max-width: 1300px) {
+    .welcome .welcome-img::before {
+        top: -110px;
+        left: -50px;
+        width: 120px;
+        height: 90px;
+    }
+
+    .welcome .welcome-img::after {
+        bottom: -110px;
+        right: -30px;
+        width: 105px;
+        height: 127px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .welcome .welcome-caption { width: 60%; }
+}
+
+@media(max-width: 992px) {
+    .welcome {
+        margin-top: -40px;
+        width: 100%;
+    }
+
+    .welcome::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 10px;
+        background-image: url(../img/welcome-bg-after.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 230px;
+        height: 60px;
+    }
+
+    .welcome .welcome-img { margin-right: 20px; }
+
+    .welcome .welcome-img::before,
+    .welcome .welcome-img::after { display: none; }
+}
+
+@media(max-width: 768px) {
+    .welcome {
+        padding: 50px 20px;
+    }
+
+    .welcome .welcome-img {
+        margin-right: 15px;
+        width: 35%;
+    }
+
+    .welcome .welcome-caption { width: 65%; }
+
+    .welcome .welcome-caption .title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .welcome .welcome-caption .text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+@media(max-width: 500px) {
+    .welcome .welcome-img { display: none; }
+    .welcome .welcome-caption { width: 100%; }
+}

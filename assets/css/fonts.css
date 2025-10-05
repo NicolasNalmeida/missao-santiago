@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "pixelfontRegular";
+  src: url("../fonts/dogica.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "pixelfontBold";
+  src: url("../fonts/dogicabold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "larsseitRegular";
+  src: url("../fonts/Larsseit-Thin.otf") format("truetype");
+}
