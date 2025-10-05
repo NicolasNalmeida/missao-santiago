@@ -350,3 +350,108 @@
     .welcome .welcome-img { display: none; }
     .welcome .welcome-caption { width: 100%; }
 }
+
+.checklist {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.checklist .checklist-banner { width: 55%; }
+.checklist .checklist-content { width: 45%; margin-top: 80px; }
+
+.checklist .checklist-content {
+    text-align: right;
+}
+
+.checklist .checklist-content .title {
+    font-family: "pixelfontBold";
+    color: #ffd800;
+    display: inline-block;
+    background-color: #213c72;
+    padding: 10px 150px 10px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.checklist .checklist-content .check-space { margin-right: 50px; }
+.checklist .checklist-content .text {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.checklist .checklist-content .checklist-list .check-item {
+    margin-bottom: 25px;
+    font-size: 23px;
+    line-height: 25px;
+}
+
+.checklist .checklist-content .checklist-list .check-item i {
+    margin-right: 5px;
+    color: #7cb342;
+}
+
+.checklist .checklist-content .btn-download {
+    display: inline-block;
+    width: 43%;
+}
+
+@media(max-width: 1600px) {
+    .checklist .checklist-content .title {
+        padding: 10px 100px 10px 10px;
+        font-size: 18px;
+    }
+
+    .checklist .checklist-content .text {
+        font-size: 24px;
+    }
+
+    .checklist .checklist-content .checklist-list .check-item {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+@media(max-width: 1400px) {
+    .checklist .checklist-content .title {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .checklist .checklist-content .text { font-size: 20px; }
+
+    .checklist .checklist-content .checklist-list .check-item {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media(max-width: 1150px) {
+    .checklist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checklist .checklist-banner,
+    .checklist .checklist-content {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .checklist .checklist-content .title {
+        padding: 10px;
+    }
+
+    .checklist .checklist-content .check-space { margin-right: 0; }
+
+    .checklist .checklist-content .btn-download { width: 40%; }
+
+}
+
+@media(max-width: 550px) {
+    .checklist .checklist-content .title { font-size: 16px; }
+    .checklist .checklist-content .btn-download { width: 80%; }
+    .checklist .checklist-content .checklist-list .check-item { font-size: 16px; }
+}
