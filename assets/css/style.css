@@ -698,3 +698,108 @@ strong.info-obs::before {
         width: 70%;
     }
 }
+
+.tips {
+    margin-top: 80px;
+}
+
+.tips .title {
+    font-family: "pixelfontBold";
+    color: #ffd800;
+    background-color: #213c72;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.tips .tips-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tips .tips-content .tips-card {
+    width: calc((100% / 3) - 30px);
+    margin: 0 15px;
+    text-align: center;
+    background-color: #213b71;
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.tips .tips-content .tips-card .tips-inf {
+    padding: 0 15px;
+}
+
+.tips .tips-content .tips-card .tips-inf .text {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.tips .tips-content .tips-card .tips-inf span.text {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.tips .tips-content .tips-card .tips-inf .help {
+    display: block;
+    background-color: #fff;
+    text-decoration: none;
+    color: #213b71;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50px;
+    font-family: 'larsseitBold';
+    margin-bottom: 5px;
+}
+
+.tips .tips-content .tips-card .tips-inf .whatsapp {
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.tips .tips-content .tips-card .tips-inf .whatsapp i { color: #1cb556; }
+
+.tips .tips-content .tips-card img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 60%;
+}
+
+.tips .details img {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 40%;
+}
+
+@media(max-width: 1399px) {
+    .tips .title { width: 80%; }
+}
+
+@media(max-width: 1199px) {
+    .tips .tips-content .tips-card .tips-inf { padding: 5px; }
+}
+
+@media(max-width: 991px) {
+    .tips .tips-content .tips-card .tips-inf { padding: 0px; }
+    .tips .title { width: 100%; line-height: 25px; padding: 10px 10px; }
+    .tips .tips-content .tips-card { width: calc((100% / 2) - 15px); margin: 0 5px; margin-bottom: 10px; }
+    .tips .details img { width: 60%; }
+}
+
+@media(max-width: 550px) {
+    .tips .tips-content .tips-card { width: 80%; }
+    .tips .details img { width: 80%; }
+}
+
+@media(max-width: 375px) {
+    .tips .tips-content .tips-card { width: 95%; }
+    .tips .details img { width: 95%; }
+}
