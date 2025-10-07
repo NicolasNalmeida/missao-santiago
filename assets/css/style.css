@@ -183,6 +183,8 @@
 .banner-main {
     position: relative;
     z-index: 2;
+    background-image: url('../img/patern-1.png');
+    background-size: 100%;
 }
 
 .welcome {
@@ -356,6 +358,10 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 60px;
+    background-image: url('../img/patern-2.png');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: bottom;
 }
 
 .checklist .checklist-banner { width: 55%; }
@@ -400,6 +406,7 @@
 
 .checklist.luggage {
     flex-direction: row-reverse;
+    background-image: none;
 }
 
 .checklist.luggage .checklist-content {
@@ -530,6 +537,21 @@
 
 .timeline-trip {
     margin-top: 80px;
+    position: relative;
+}
+
+.timeline-trip::before {
+    position: absolute;
+    top: -130%;
+    left: -20%;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2000px;
+    background-image: url('../img/patern-3.png');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    z-index: -1;
 }
 
 .timeline-trip .title {
@@ -701,6 +723,10 @@ strong.info-obs::before {
 
 .tips {
     margin-top: 80px;
+    background-image: url('../img/patern-4.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: right top;
 }
 
 .tips .title {
