@@ -834,6 +834,7 @@ strong.info-obs::before {
 .program {
     position: relative;
     margin-top: 80px;
+    padding-bottom: 160px;
     background-image: url(../img/sky-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1000,4 +1001,87 @@ strong.info-obs::before {
 @media(max-width: 400px) {
     .program .program-day .box,
     .program .btn-program img { width: 80%; }
+}
+
+.weather {
+    position: relative;
+    margin-top: -50px;
+}
+
+.weather::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    display: block;
+    background-image: url('../img/patern-5.png');
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.weather .title {
+    font-family: "pixelfontBold";
+    color: #ffd800;
+    line-height: 25px;
+}
+
+.weather .text {
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.weather .weather-info {
+    padding: 80px 50px;
+    background-color: #213c72;
+    transform: rotate(1.2deg);
+    color: #fff;
+    width: 70%;
+}
+
+.weather .weather-info::before {
+    content: "";
+    position: absolute;
+    top: 190px;
+    left: -120px;
+    display: block;
+    width: 500px;
+    height: 400px;
+    background-image: url('../img/bg-cloud.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.weather .weather-info::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    right: -290px;
+    display: block;
+    width: 430px;
+    height: 630px;
+    background-image: url(../img/weather.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media(max-width: 991px) {
+    .weather .weather-info::before,
+    .weather .text br { display: none; }
+
+    .weather .weather-info { width: 100%; }
+    .weather .weather-info::after {
+        top: 75%;
+        right: 0;
+        transform: rotate(-5deg);
+        width: 290px;
+        height: 420px;
+    }
+}
+
+@media(max-width: 490px) {
+    .weather .weather-info { padding: 50px 20px; }
+    .weather .weather-info::after { display: none; }
 }
