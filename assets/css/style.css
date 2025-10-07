@@ -613,7 +613,7 @@
     content: "";
     position: absolute;
     top: -40px;
-    right: -50px;
+    right: -30px;
     display: block;
     width: 75px;
     height: 100px;
@@ -828,4 +828,176 @@ strong.info-obs::before {
 @media(max-width: 375px) {
     .tips .tips-content .tips-card { width: 95%; }
     .tips .details img { width: 95%; }
+}
+
+
+.program {
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/sky-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.program::before {
+    content: "";
+    position: absolute;
+    top: 110px;
+    right: 180px;
+    width: 170px;
+    height: 120px;
+    background-image: url(../img/nuvem.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.program::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/patern-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+}
+
+.program .title {
+    font-family: "pixelfontBold";
+    color: #ffd800;
+    background-color: #213c72;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.program .text {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 100px;
+}
+
+.program .program-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.program .program-day .box { position: relative; }
+
+.program .program-day .dia1 { width: 30%; margin-top: -110px; }
+.program .program-day .dia1::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -120px;
+    display: block;
+    width: 180px;
+    height: 90px;
+    background-image: url(../img/seta-dia-1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.program .program-day .dia2 { width: 30%; }
+.program .program-day .dia2::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -160px;
+    display: block;
+    width: 180px;
+    height: 120px;
+    background-image: url(../img/seta-dia-2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.program .program-day .dia3 { width: 25%; margin-top: 120px; }
+.program .program-day .dia3::before {
+    content: "";
+    position: absolute;
+    bottom: -110px;
+    left: -90px;
+    transform: rotate(155deg);
+    display: block;
+    width: 180px;
+    height: 120px;
+    background-image: url(../img/seta-dia-1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.program .btn-program {
+    display: block;
+    margin-top: 50px;
+}
+
+.program .btn-program img { margin: 0 auto; width: 35%; }
+
+@media(max-width: 991px) {
+    .program .program-day .dia1::before {
+        top: -60px;
+        right: -70px;
+        width: 120px;
+        height: 60px;
+        transform: rotate(8deg);
+    }
+    .program .program-day .dia1 { margin-top: -60px; }
+
+    .program .program-day .dia2::before {
+        top: 10px;
+        right: -110px;
+        width: 120px;
+        height: 90px;
+    }
+
+    .program .program-day .dia3 { margin-top: 90px; }
+    .program .program-day .dia3::before {
+        bottom: -90px;
+        left: -50px;
+        width: 140px;
+        height: 80px;
+    }
+}
+
+@media(max-width: 767px) {
+    .program .title {
+        width: 100%;
+        line-height: 25px;
+    }
+
+    .program::before,
+    .program .program-day .dia1::before,
+    .program .program-day .dia2::before,
+    .program .program-day .dia3::before {
+        display: none;
+    }
+
+    .program .program-day {
+        flex-direction: column;
+    }
+
+    .program .program-day .box {
+        margin: initial;
+        margin-bottom: 50px;
+        width: 60%;
+    }
+
+    .program .btn-program { margin-top: 0; }
+
+    .program .btn-program img {
+        width: 60%;
+    }
+}
+
+@media(max-width: 400px) {
+    .program .program-day .box,
+    .program .btn-program img { width: 80%; }
 }
