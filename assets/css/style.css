@@ -527,3 +527,174 @@
     .checklist .checklist-content .checklist-list .check-item,
     .checklist.luggage .checklist-content .text { font-size: 16px; }
 }
+
+.timeline-trip {
+    margin-top: 80px;
+}
+
+.timeline-trip .title {
+    font-family: "pixelfontBold";
+    color: #ffd800;
+    background-color: #213c72;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    width: 35%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.timeline-trip .text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.timeline-trip .trip-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.timeline-trip .trip-content .card-trip {
+    width: calc((100% / 3) - 30px);
+    background-color: #213c72;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.timeline-trip .trip-content .card-trip.deg-1 { transform: rotate(-1.5deg); }
+.timeline-trip .trip-content .card-trip.deg-2 { transform: rotate(2deg); }
+.timeline-trip .trip-content .card-trip.deg-3 { transform: rotate(-1.2deg); }
+
+.timeline-trip .trip-content::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    display: block;
+    width: 75px;
+    height: 100px;
+    background-image: url('../img/card-rock.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.timeline-trip .trip-content::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -50px;
+    display: block;
+    width: 75px;
+    height: 100px;
+    background-image: url('../img/card-smile.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.timeline-trip .trip-content .card-trip img {
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.timeline-trip .trip-content .card-trip .info-trip h4 {
+    font-family: "pixelfontBold";
+    font-size: 13px;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+.timeline-trip .trip-content .card-trip .info-trip p {
+    font-family: "larsseitMedium";
+    font-size: 16px;
+}
+
+.timeline-trip .trip-content .card-trip .info-trip span {
+    font-family: "larsseitRegular";
+    font-size: 12px;
+    font-style: italic;
+}
+
+.timeline-trip .info-obs {
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+strong.info-obs::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 30%;
+    display: block;
+    width: 75px;
+    height: 100px;
+    background-image: url('../img/card-confete.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.timeline-trip .btn-calendar img {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 25%;
+}
+
+@media(max-width: 1399px) {
+    .timeline-trip .title { width: 40%; }
+}
+
+@media(max-width: 1199px) {
+    .timeline-trip .title { width: 60%; }
+}
+
+@media(max-width: 991px) {
+    .timeline-trip .title { width: 60%; }
+    .timeline-trip .trip-content { justify-content: center; }
+    .timeline-trip .trip-content .card-trip { width: calc((100% / 2) - 30px); margin: 10px 15px; }
+    strong.info-obs::before { left: 20%; }
+    .timeline-trip .trip-content::before { left: -30px; }
+    .timeline-trip .trip-content::after {
+        top: -30px;
+        right: -40px;
+    }
+
+    .timeline-trip .btn-calendar img {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 50%;
+    }
+}
+
+@media(max-width: 767px) {
+    .timeline-trip .title { width: 90%; }
+    .timeline-trip .trip-content { justify-content: center; }
+    .timeline-trip .trip-content .card-trip { width: 70%; }
+
+    strong.info-obs::before,
+    .timeline-trip .trip-content::after,
+    .timeline-trip .trip-content::before { display: none; }
+}
+
+@media(max-width: 445px) {
+    .timeline-trip .title { width: 100%; }
+    .timeline-trip .trip-content .card-trip { width: 100%; }
+
+    .timeline-trip .btn-calendar img {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 70%;
+    }
+}
