@@ -373,6 +373,7 @@
     padding: 10px 150px 10px 10px;
     font-size: 20px;
     margin-bottom: 20px;
+    line-height: 28px;
 }
 
 .checklist .checklist-content .check-space { margin-right: 50px; }
@@ -397,6 +398,41 @@
     width: 43%;
 }
 
+.checklist.luggage {
+    flex-direction: row-reverse;
+}
+
+.checklist.luggage .checklist-content {
+    text-align: left;
+    margin-top: 0;
+    width: 50%;
+}
+
+.checklist.luggage .checklist-content .title {
+    padding: 25px 60px 25px 100px;
+    line-height: 28px;
+}
+
+.checklist.luggage .checklist-content .subtitle {
+    font-family: 'larsseitBold';
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 45px;
+    margin-top: 20px;
+}
+
+.checklist.luggage .checklist-content .text {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    line-height: 28px;
+}
+
+.checklist.luggage .checklist-content .check-space {
+    margin-right: 0;
+    margin-left: 50px;
+}
+
 @media(max-width: 1600px) {
     .checklist .checklist-content .title {
         padding: 10px 100px 10px 10px;
@@ -410,6 +446,23 @@
     .checklist .checklist-content .checklist-list .check-item {
         font-size: 20px;
         line-height: 22px;
+    }
+
+    .checklist.luggage .checklist-content .title {
+        padding: 25px 60px 25px 50px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .checklist.luggage .checklist-content .subtitle {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    .checklist.luggage .checklist-content .text {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 25px;
     }
 }
 
@@ -425,16 +478,25 @@
         font-size: 18px;
         line-height: 22px;
     }
+
+    .checklist.luggage .checklist-content .title {
+        padding: 25px;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 @media(max-width: 1150px) {
-    .checklist {
+    .checklist,
+    .checklist.luggage {
         flex-direction: column;
         align-items: center;
     }
 
     .checklist .checklist-banner,
-    .checklist .checklist-content {
+    .checklist .checklist-content,
+    .checklist.luggage .checklist-banner,
+    .checklist.luggage .checklist-content {
         width: 100%;
         text-align: center;
         margin-top: 0;
@@ -445,13 +507,23 @@
     }
 
     .checklist .checklist-content .check-space { margin-right: 0; }
-
     .checklist .checklist-content .btn-download { width: 40%; }
 
+    .checklist.luggage .checklist-content {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .checklist.luggage .checklist-content .title {
+        padding: 20px;
+    }
+
+    .checklist.luggage .checklist-content .check-space { margin-left: 0; }
 }
 
 @media(max-width: 550px) {
     .checklist .checklist-content .title { font-size: 16px; }
     .checklist .checklist-content .btn-download { width: 80%; }
-    .checklist .checklist-content .checklist-list .check-item { font-size: 16px; }
+    .checklist .checklist-content .checklist-list .check-item,
+    .checklist.luggage .checklist-content .text { font-size: 16px; }
 }

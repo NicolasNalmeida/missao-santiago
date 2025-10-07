@@ -12,3 +12,8 @@
   font-family: "larsseitRegular";
   src: url("../fonts/Larsseit-Thin.otf") format("truetype");
 }
+
+@font-face {
+  font-family: "larsseitBold";
+  src: url("../fonts/Larsseit-Bold.otf") format("truetype");
+}
