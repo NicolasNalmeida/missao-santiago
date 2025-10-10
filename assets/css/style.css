@@ -1063,7 +1063,7 @@ strong.info-obs::before {
 }
 
 .weather .weather-box .weather-dynamic {
-    width: 450px;
+    width: 420px;
     background: #2B83C3;
     background: linear-gradient(180deg,rgba(43, 131, 195, 1) 0%, rgba(145, 195, 232, 1) 100%);
     padding: 10px 10px;
