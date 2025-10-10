@@ -1135,6 +1135,11 @@ strong.info-obs::before {
 
 .weather .weather-box .weather-dynamic .flex-days .day-column .day-info span:last-child { margin-bottom: 0; }
 
+@media(max-width: 450px) {
+    .weather .weather-box .weather-dynamic .flex-days .day-column .day-info #day-week { font-size: 16px; }
+    .weather .weather-box .weather-dynamic .flex-days .day-column .day-info #temperature { font-size: 16px; }
+}
+
 .weather .weather-box img { width: 460px; }
 
 @media(max-width: 1199px) {
