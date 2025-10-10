@@ -1062,6 +1062,79 @@ strong.info-obs::before {
     margin-top: -240px;
 }
 
+.weather .weather-box .weather-dynamic {
+    width: 450px;
+    background: #2B83C3;
+    background: linear-gradient(180deg,rgba(43, 131, 195, 1) 0%, rgba(145, 195, 232, 1) 100%);
+    padding: 10px 10px;
+}
+
+.weather .weather-box .weather-dynamic .city {
+    display: inline-block;
+    background-color: #ffffff50;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.weather .weather-box .weather-dynamic .flex-temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    color: #fff;
+    font-size: 75px;
+}
+
+.weather .weather-box .weather-dynamic .status,
+.weather .weather-box .weather-dynamic .hour {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.weather .weather-box .weather-dynamic .status { font-size: 35px; }
+.weather .weather-box .weather-dynamic .hour { font-size: 22px; }
+
+.weather .weather-box .weather-dynamic .flex-temperature i { margin-right: 20px; }
+
+.weather .weather-box .weather-dynamic .flex-days {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather .weather-box .weather-dynamic .flex-days .day-column {
+    width: calc((100% / 5) - 5px);
+}
+
+.weather .weather-box .weather-dynamic .flex-days .day-column .status {
+    background-color: #ffffff50;
+    padding: 10px;
+}
+
+.weather .weather-box .weather-dynamic .flex-days .day-column .day-info {
+    background-color: #ffffff50;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.weather .weather-box .weather-dynamic .flex-days .day-column .day-info span {
+    display: block;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.weather .weather-box .weather-dynamic .flex-days .day-column .day-info #day-week { font-size: 25px; }
+
+.weather .weather-box .weather-dynamic .flex-days .day-column .day-info #temperature { font-size: 30px; }
+
+.weather .weather-box .weather-dynamic .flex-days .day-column .day-info span:last-child { margin-bottom: 0; }
+
 .weather .weather-box img { width: 460px; }
 
 @media(max-width: 1199px) {
